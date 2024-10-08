@@ -1,0 +1,14 @@
+<ng-container *ngIf="car === null; else elseBlock">
+    <div>
+        <p><strong>Car not available with that id!</strong></p>
+    </div>
+</ng-container>
+<ng-template #elseBlock>
+    <div>
+        <h1>Car Details</h1>
+        <h3>{{car?.make}}</h3>
+        <h3>{{car?.model}}</h3>
+        <p>{{car?.description}}</p>
+    </div>
+    <div><a routerLink="/cars/{{ car?.id }}/edit">Edit</a></div>
+</ng-template>

@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: sans-serif;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 5px;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+}
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+label {
+  float: left;
+  width: 10em;
+  margin-right: 0.3em;
+  text-align: right;
+}
