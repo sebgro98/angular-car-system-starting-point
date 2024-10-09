@@ -1,7 +1,5 @@
-<ng-container *ngIf="car === null">
-    <div><p><strong>Car not available!</strong></p></div>
-</ng-container>
-<ng-container *ngIf="car !== null">
+
+<ng-container *ngIf="car$ | async as car">
 <div>
     <h2>Update Car</h2>
     <form [formGroup]="carForm" (ngSubmit)="updateCar()">

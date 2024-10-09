@@ -8,16 +8,18 @@
             <th>Description</th>
             <th>View</th>
             <th>Edit</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let car of cars">
+        <tr *ngFor="let car of cars$ | async">
             <td>{{car.id}}</td>
             <td>{{car.make}}</td>
             <td>{{car.model}}</td>
             <td>{{car.description}}</td>
             <td><a routerLink="/cars/{{ car.id }}">View car</a></td>
             <td><a routerLink="/cars/{{ car.id }}/edit">Edit</a></td>
+            <td><button (click)="deleteCar(car.id)">Delete</button></td>
         </tr>
     </tbody>
 </table>

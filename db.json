@@ -1,0 +1,22 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "make": "Porsche",
+      "model": "911",
+      "description": "Archetypal midlife crisis in car form"
+    },
+    {
+      "id": "2",
+      "make": "VolksWagen",
+      "model": "Beetle",
+      "description": "Herbie"
+    },
+    {
+      "id": "3",
+      "make": "Mini",
+      "model": "Clubman",
+      "description": "Mini estate"
+    }
+  ]
+}

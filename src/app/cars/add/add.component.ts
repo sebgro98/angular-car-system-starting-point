@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Car } from '../models/car';
-import { CarService } from '../../car.service';
+import { CarService } from '../services/car.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,9 +22,10 @@ export class AddComponent {
       description: ["", Validators.required]
     })
   }
-
   addCar() {
-    this.carService.addCar(this.carForm.value)
-    this.router.navigate(['cars'])
+    this.carService.addCar(this.carForm.value).subscribe()
+    this.router.navigate(['cars']);   
   }
+  
+
 }

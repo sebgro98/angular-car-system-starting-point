@@ -1,7 +1,8 @@
 import { Component, inject } from '@angular/core';
-import { CarService } from '../../car.service';
+import { CarService } from '../services/car.service';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from '../models/car';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-view',
@@ -13,5 +14,5 @@ export class ViewComponent {
   route = inject(ActivatedRoute)
 
   id = this.route.snapshot.paramMap.get('id')
-  car: Car | null = this.carService.getCarById(Number(this.id))
+  car$: Observable<Car> = this.carService.getCarById(this.id)
 }
